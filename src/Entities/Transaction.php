@@ -351,6 +351,9 @@ class Transaction
     /** @var Card */
     public $cardDetails;
 
+    /** @var string */
+    public $batchSequenceNumber;
+    
     /**
      * Creates a `Transaction` object from a stored transaction ID.
      *

@@ -52,6 +52,9 @@ class GpEcomMapping
         $result->timestamp = (!empty($root->attributes()->timestamp)) ?
             (string) $root->attributes()->timestamp :
             '';
+        if (!empty($root->srd)) {
+            $result->batchSequenceNumber = (string)$root->batchid;
+        }
 
         // 3d secure enrolled
         if (!empty($root->enrolled)) {
